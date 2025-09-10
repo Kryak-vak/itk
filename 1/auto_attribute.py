@@ -19,5 +19,6 @@ class Bar(metaclass=Meta):
     pass
 
 
-print(Foo.created_at)
-print(Bar.created_at)
+if __name__ == "__main__":
+    print(Foo.created_at)
+    print(Bar.created_at)

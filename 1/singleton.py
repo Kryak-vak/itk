@@ -46,21 +46,22 @@ class NewSingleton:
         self.value = value
 
 
-inst1 = NewSingleton(1)
-print(inst1)
-print(NewSingleton._instance)
-inst2 = NewSingleton(2)
-print(inst2)
-print(NewSingleton._instance)
-print(inst1 is inst2)
+if __name__ == "__main__":
+    inst1 = NewSingleton(1)
+    print(inst1)
+    print(NewSingleton._instance)
+    inst2 = NewSingleton(2)
+    print(inst2)
+    print(NewSingleton._instance)
+    print(inst1 is inst2)
 
-print()
+    print()
 
 
-# import
+    # import
 
-class ImportSingleton:
-    pass
+    class ImportSingleton:
+        pass
 
-singleton = ImportSingleton()
+    singleton = ImportSingleton()
 
