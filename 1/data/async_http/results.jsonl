@@ -1,0 +1,3 @@
+{"https://example.com": 200}
+{"https://httpbin.org/status/404": 404}
+{"https://nonexistent.url": 600}
