@@ -1,0 +1,7 @@
+https://example.com
+https://httpbin.org/status/404
+https://nonexistent.url
+https://httpbin.org/status/400
+https://httpbin.org/status/401
+https://httpbin.org/status/402
+https://httpbin.org/status/403

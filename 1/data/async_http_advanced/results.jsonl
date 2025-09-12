@@ -1,0 +1,7 @@
+{"url": "https://example.com", "content": {"status": 0, "error": "200, message='Attempt to decode JSON with unexpected mimetype: text/html', url='https://example.com'"}}
+{"url": "https://httpbin.org/status/404", "content": {"status": 0, "error": "404, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://httpbin.org/status/404'"}}
+{"url": "https://nonexistent.url", "content": {"status": 0, "error": ""}}
+{"url": "https://httpbin.org/status/400", "content": {"status": 0, "error": ""}}
+{"url": "https://httpbin.org/status/401", "content": {"status": 0, "error": "401, message='Attempt to decode JSON with unexpected mimetype: ', url='https://httpbin.org/status/401'"}}
+{"url": "https://httpbin.org/status/403", "content": {"status": 0, "error": "403, message='Attempt to decode JSON with unexpected mimetype: text/html; charset=utf-8', url='https://httpbin.org/status/403'"}}
+{"url": "https://httpbin.org/status/402", "content": {"status": 0, "error": "402, message='Attempt to decode JSON with unexpected mimetype: ', url='https://httpbin.org/status/402'"}}
