@@ -31,11 +31,12 @@ def lru_cache(maxsize: int = 4):
 
             res = CacheMock.get(func_name, args_key)
 
-            size = CacheMock.get_size(func_name)
-            if res is None or maxsize < size:
+            if res is None:
                 res = func(*args, **kwargs)
             
-            CacheMock.set(func_name, args_key, res)
+            size = CacheMock.get_size(func_name)
+            if maxsize >= size:
+                CacheMock.set(func_name, args_key, res)
 
             return res
 
