@@ -44,7 +44,7 @@ def generate_data(n: int) -> list[int]:
 
 
 def procces_number(number: int) -> None:
-    is_prime(number)
+    factorial(number)
 
 
 def factorial(number: int) -> int:
@@ -164,11 +164,18 @@ if __name__ == "__main__":
     numbers = generate_data(1000000)
 
     main_thread(numbers)
+    print("main_thread done")
     thread_pool(numbers)
+    print("thread_pool done")
     multi_pool(numbers)
+    print("multi_pool done")
     multi_process_queue(numbers)
+    print("multi_process_queue done")
     multi_process_queue(numbers, chunk_size=1000)
+    print("multi_process_queue chunk_size=1000 done")
     multi_process_queue(numbers, chunk_size=10000)
+    print("multi_process_queue chunk_size=10000 done")
     multi_process_queue(numbers, chunk_size=100000)
+    print("multi_process_queue chunk_size=100000 done")
 
     visualize(Timer.durations)
