@@ -63,16 +63,16 @@ class FuncLock:
 
     def _is_expired(self, timespec: str | tuple[int, int]) -> bool:
         if isinstance(timespec, str):
-            seconds, milliseconds = map(int, timespec.split(","))
+            seconds, microseconds = map(int, timespec.split(","))
         else:
-            seconds, milliseconds = timespec
+            seconds, microseconds = timespec
 
-        cur_seconds, cur_milliseconds = self._get_time()
+        cur_seconds, cur_microseconds = self._get_time()
 
         if seconds < cur_seconds:
             return True
         elif seconds == cur_seconds:
-            if milliseconds < cur_milliseconds:
+            if microseconds < cur_microseconds:
                 return True
         
         return False
