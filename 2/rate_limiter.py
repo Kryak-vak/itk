@@ -61,6 +61,7 @@ def test_request(rate_limiter):
 if __name__ == '__main__':
     # test 1
     print("Starting test 1")
+    
     rate_limiter = RateLimiter()
     for i in range(6):
         test_request(rate_limiter)
@@ -68,20 +69,22 @@ if __name__ == '__main__':
 
     # test 2
     print("\nStarting test 2")
+
     rate_limiter = RateLimiter()
     for i in range(5):
         test_request(rate_limiter)
         time.sleep(1)
     time.sleep(0.1)
-    
+
     for i in range(5):
         test_request(rate_limiter)
     
     
     # test 3
-    # rate_limiter = RateLimiter()
-    # print("\nStarting test 3")
-    # for _ in range(50):
-    #     time.sleep(random.randint(1, 2))
-    #     test_request(rate_limiter)
+    print("\nStarting test 3")
+
+    rate_limiter = RateLimiter()
+    for _ in range(50):
+        time.sleep(random.randint(1, 2))
+        test_request(rate_limiter)
 
